@@ -1,2 +1,2 @@
-# Telegram Bot For Marketing And Audience Building 
-*Build with telethon (python)*
+# Python Package For Marketing And Building Audience On Telegram 
+*Build with telethon*
