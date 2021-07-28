@@ -8,7 +8,8 @@ ___
 *To add a lot of members to a group / channel from another group*
 
 1. Clone the repo
-2. Create a python file `test.py` (like the tree below)
+2. `pip install -r requirements.txt`
+3. Create a python file `test.py` (like the tree below)
     ```
     ├── spamgram
     │   ├── addtoentity.py
@@ -18,7 +19,7 @@ ___
     |
     ├── test.py
     ```
-3. Add the below code to `test.py`
+4. Add the below code to `test.py`
    ```py
     # test.py
     from spamgram  import Telegram_Add, EntityType
