@@ -3,3 +3,4 @@ example.py
 beta_features
 __pycache__
 *.csv
+venv

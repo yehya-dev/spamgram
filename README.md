@@ -30,8 +30,7 @@ ___
     # Don't have same name for two different projects (This will overwrite the data of the previous project)
     
     my_group_proj = Telegram_Add(add_to_entity, entity_type, unique_slug)
-    my_group_proj.create_dirs_and_files()
-
+    my_group_proj.start()
     # The above line will create all the required directories and files inside spamgram directory.
    ```
    You'll need to add the data required as metioned below to the respective files
@@ -63,8 +62,8 @@ ___
         (note the multiple commas)
    ```
    ```py
-   # Now to start the process
-   my_group_proj.start()
+   # Now to start the process by pressing enter 
+
    ```
 
 ### Features

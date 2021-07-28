@@ -38,15 +38,14 @@ class Telegram_Add:
         self.fake_accounts_file = self.get_full_path(f'accounts.csv')
         self.banned_account_file = self.get_full_path(f'bannedac_{unique_slug}.csv')
         self.sessions_dir = self.get_full_path('sessions')
-
-
-        if not self.collect_groups_file.is_file():
-            raise FileNotFound(f'{self.collect_groups_file} was not found or cannot be read')
-
-        if not self.fake_accounts_file.is_file():
-            raise FileNotFound(f'{self.fake_accounts_file} was not found or cannot be read')
-
         self.users_data_dir =  self.get_full_path(f'users_data/{unique_slug}')
+
+        self.create_dirs_and_files()
+
+        res = input("Press Enter After Adding The Necessary Details In The .CSV Files -- (q to exit) : ")
+        if res.lower() == 'q':
+            exit()
+
         self.all_clients : dict = {}
         self.blacklist =  set()
         self.all_clients = self.get_clients()
@@ -117,7 +116,7 @@ class Telegram_Add:
     def create_dirs_and_files(self):
         not self.blacklist_file.is_file() and open(self.blacklist_file, 'w')
         not self.collect_groups_file.is_file() and open(self.collect_groups_file, 'w')
-        not self.fake_accounts_file.is_fife() and open(self.fake_accounts_file, 'w')
+        not self.fake_accounts_file.is_file() and open(self.fake_accounts_file, 'w')
         not self.banned_account_file.is_file() and open(self.banned_account_file, 'w')
         not self.admin_account_file.is_file() and open(self.admin_account_file, 'w')
         not self.users_data_dir.is_dir() and mkdir(self.users_data_dir)
